@@ -14,6 +14,7 @@ on a single or multiple sites.
 Example usage
 -------------
 
+*Basics*
 Prospective buyer visits /products page (page ID 1), which has an arbitrary value 
 of 2 associated with it.
 
@@ -42,3 +43,31 @@ the visitor level.
 The counter value in the key/value pair within slot 5 represents the visits count
 to the specific page. If a user has visited the page before, the count will
 incriment, however, the pageValue will not.
+
+*Multiple user types*
+The script can handle multiple user types being stored against an individual
+visitor to the website, with a unique count per type.
+
+For example, in case the above prospective buyer than logs in onto the website
+thus indicating a repeat buyer, we can flag them as such.
+```
+var demographic = 'returning buyer';
+var uniquePageID = 20;
+var pageValue = 10;
+cstVars.pushPage(demographic, pageValue, uniquePageID);
+ ```
+
+ Resulting in the following custom variables cookie data.
+ ```
+> cstVars.printAllVars()
+ GA custom vars: 
+ Slot 1 key: prospective buyer, returning buyer
+ 1: 4, 10
+ 2: undefined 
+ 3: undefined 
+ 4: undefined 
+ 5: {"1":1, "20":1} 
+```
+
+These individual counts could potentially allow for applying thresholds to
+filter out false positives (subject to site IA).
