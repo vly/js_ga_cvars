@@ -14,7 +14,7 @@ on a single or multiple sites.
 Example usage
 -------------
 
-*Basics*
+####Basics
 Prospective buyer visits /products page (page ID 1), which has an arbitrary value 
 of 2 associated with it.
 
@@ -44,7 +44,7 @@ The counter value in the key/value pair within slot 5 represents the visits coun
 to the specific page. If a user has visited the page before, the count will
 incriment, however, the pageValue will not.
 
-*Multiple user types*
+####Multiple user types
 The script can handle multiple user types being stored against an individual
 visitor to the website, with a unique count per type.
 
