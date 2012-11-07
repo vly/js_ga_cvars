@@ -17,25 +17,12 @@ Example usage
 Prospective buyer visits /products page (page ID 1), which has an arbitrary value 
 of 2 associated with it.
 
-First, we define the push functionality
-
-```
-function test_run(demographic, page_value, page_id)
-{
-	try {
-		(pushMilestone(demographic, page_value, page_id) == ERROR) ?
-		console.log('Error.') : console.log('Success.');
-	}
-	catch (error) {
-		console.log('Error: ' + error.message);
-	}
-}
-```
-
-Next we push the demographic information and value into slot 1 if user has not
-visited the page before.
+Usage would be to push the demographic information and value into slot 1 if user 
+has not visited the page before.
 
 ```
 var demographic = 'prospective buyer';
-test_run(demographic, 2, 1);
+var uniquePageID = 1;
+var pageValue = 4;
+cstVars.pushPage(demographic, pageValue, uniquePageID);
  ```
