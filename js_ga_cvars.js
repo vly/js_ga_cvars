@@ -16,8 +16,8 @@ if(e<0){e=a.length}g=a.substring(d+f,e)}return g};
 
 
 // constants
-GA_NAME = 'inj';
-ERROR = -1;
+var GA_NAME = 'inj';
+var ERROR = -1;
 
 // grab cookie with customvars
 function retCookie()

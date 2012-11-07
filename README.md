@@ -35,5 +35,7 @@ function test_run(demographic, page_value, page_id)
 Next we push the demographic information and value into slot 1 if user has not
 visited the page before.
 
-```var demographic = 'prospective buyer';
-test_run(demographic, 2, 1); ```
+```
+var demographic = 'prospective buyer';
+test_run(demographic, 2, 1);
+ ```
